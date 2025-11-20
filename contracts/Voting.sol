@@ -62,7 +62,7 @@ contract Voting {
     function setPause(bool _pause) public onlyAdmin {
         paused = _pause;
         emit Paused(_pause);
-    }
+    }    
 
     function giveRightToVote(address voter, uint weight) public onlyAdmin {
         require(!voters[voter].voted, "Already voted");
